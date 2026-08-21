@@ -1,0 +1,42 @@
+name: Repo CI
+
+on:
+  push:
+    paths:
+      - "package.json"
+      - "package-lock.json"
+      - "lefthook.yml"
+      - "commitlint.config.mjs"
+      - ".github/workflows/repo-ci.yml"
+  pull_request:
+    paths:
+      - "package.json"
+      - "package-lock.json"
+      - "lefthook.yml"
+      - ".github/workflows/repo-ci.yml"
+
+#concurrency:
+#  group: ${{ github.workflow }}-${{ github.ref }}
+#  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  repo-ci:
+    name: Validate Dependencies & Tooling
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install root dependencies
+        run: npm ci
