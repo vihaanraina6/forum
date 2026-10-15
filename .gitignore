@@ -29,7 +29,6 @@ dist-ssr
 .vscode/*
 !.vscode/extensions.json
 .idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
@@ -38,3 +37,16 @@ dist-ssr
 
 # Vite cache
 .vite
+vite.*
+
+# Output
+.output
+.vercel
+.netlify
+.wrangler
+/.svelte-kit
+/build
+
+# OS
+.DS_Store
+Thumbs.db

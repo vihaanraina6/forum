@@ -1,72 +1,26 @@
-# OSDForum
+<h1 align="center">OSDC Forum</h1>
 
-> **Work in Progress**: A community forum platform built for members of the **OSDC (Open Source Developers Club)**.
+<p align="center">
+  <img src="https://img.shields.io/github/stars/osdc/forum?style=for-the-badge&color=yellow" alt="stars" />
+  <img src="https://img.shields.io/github/forks/osdc/forum?style=for-the-badge&color=blue" alt="forks" />
+  <img src="https://img.shields.io/github/issues/osdc/forum?style=for-the-badge&color=red" alt="issues" />
+  <img src="https://img.shields.io/github/license/osdc/forum?style=for-the-badge&color=green" alt="license" />
+</p>
 
-### Prerequisites
+> **Work in Progress**: A community forum platform built for members of the **OSDC (Open Source Developers Community)**.
+
+<h3 align="center"> Built With</h3>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/svelte-%23FF3E00.svg?style=for-the-badge&logo=svelte&logoColor=white" alt="Svelte" />
+  <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+</p>
+
+## Prerequisites
 
 - [Node.js](https://nodejs.org/) (v24+ recommended)
-- `npm`
-
-## Run Locally
-
-Clone the project & go to project directory
-
-```bash
-  git clone https://github.com/osdc/forum
-  cd forum
-```
-
-Install dependencies
-
-```bash
-  npm install 
-```
-
-Start [Vite](https://vite.dev/) server
-
-```bash
-  cd frontend
-  npm run dev
-```
-
-## Frontend Linting
-
-The frontend uses [Biome](https://biomejs.dev/) for linting and formatting.
-
-Run checks:
-
-```bash
-cd frontend
-npm run ci
-```
-
-Automatically fix formatting and safe lint issues:
-
-```bash
-cd frontend
-npm run fix
-```
-
-## Git Hooks
-
-Git hooks are automated using [Lefthook](https://lefthook.dev/) to ensure code quality before commits and pushes.
-
-`Pre-Commit:` Runs Biome to check code formatting and catch linting errors.
-
-`Pre-Push:` Runs the Vite build process (vite build) to verify there are no compilation errors.
-
-`Post-Merge:` Syncs Lefthook configuration (npx lefthook install) and automatically installs updated project dependencies.
-
-## Commit Message Guidelines
-
-We follow the [Conventional Commits](https://www.conventionalcommits.org/) specification using [Commitlint](https://commitlint.js.org/).
-
-Example format:
-
-```bash
-git commit -m "feat: add OAuth login support"
-git commit -m "fix(ui): resolve navbar overflow on mobile"
-```
+- `bun`
 
 ## License
 
