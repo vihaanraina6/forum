@@ -6,11 +6,15 @@ on:
       - "frontend/**"
       - ".github/workflows/frontend-ci.yml"
       - "package-lock.json"
+    branches:
+      - main
   pull_request:
     paths:
       - "frontend/**"
       - ".github/workflows/frontend-ci.yml"
       - "package-lock.json"
+    branches:
+      - main
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }} # creates a unique group; for example, "Commitlint-refs/heads/main"

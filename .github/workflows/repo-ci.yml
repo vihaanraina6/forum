@@ -2,6 +2,8 @@ name: Repo CI
 
 on:
   push:
+    branches:
+      - main
     paths:
       - "package.json"
       - "package-lock.json"
@@ -9,6 +11,8 @@ on:
       - "commitlint.config.mjs"
       - ".github/workflows/repo-ci.yml"
   pull_request:
+    branches:
+      - main
     paths:
       - "package.json"
       - "package-lock.json"
